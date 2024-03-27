@@ -15,7 +15,6 @@ import {
 import React, { useState } from "react";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-
   const StyledToolBar = styled(Toolbar)({
     display: "flex",
     justifyContent: "space-between",
@@ -29,6 +28,7 @@ export default function Navbar() {
   const Icons = styled(Box)(({ theme }) => ({
     display: "flex",
     alignItems: "center",
+    justifyContent:'space-between'
   }));
   const UserBox = styled(Box)(({ theme }) => ({
     display: "flex",
@@ -53,19 +53,20 @@ export default function Navbar() {
           }}
         />
         <Search>
-          <InputBase placeholder="Search" />
+          <InputBase  sx={{width:'100%',color:'gray'}} placeholder="Search" />
         </Search>
-        <Icons sx={{ display: { xs: "none", md: "flex" } }}>
+        <Icons sx={{ gap:'15px',display: { xs: "none", md: "flex" } }}>
           <Badge badgeContent={4} color="error">
             <MailIcon color="inherit" />
           </Badge>
           <Badge badgeContent={4} color="error">
             <NotificationsIcon color="inherit" />
           </Badge>
-          <Avatar
+          <Avatar 
+          
             onClick={() => setOpen(true)}
             alt="V"
-            sx={{ width: 24, height: 24 }}
+            sx={{ width: 24, height: 24,cursor:'pointer' }}
           />
         </Icons>
         <UserBox sx={{ display: { xs: "flex", md: "none" } }}>
@@ -74,7 +75,7 @@ export default function Navbar() {
             alt="V"
             sx={{ width: 24, height: 24 }}
           />
-          <Typography>Vaez</Typography>
+          <Typography onClick={() => setOpen(true)}>Vaez</Typography>
         </UserBox>
       </StyledToolBar>
       <Menu
@@ -91,9 +92,9 @@ export default function Navbar() {
           horizontal: "left",
         }}
       >
-        <MenuItem>Profile</MenuItem>
-        <MenuItem>My account</MenuItem>
-        <MenuItem>Logout</MenuItem>
+        <MenuItem onClick={()=>setOpen(false)}>Profile</MenuItem>
+        <MenuItem onClick={()=>setOpen(false)}>My account</MenuItem>
+        <MenuItem onClick={()=>setOpen(false)}>Logout</MenuItem>
       </Menu>
     </AppBar>
   );

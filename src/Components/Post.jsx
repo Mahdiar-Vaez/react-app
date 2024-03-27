@@ -1,21 +1,22 @@
 import React from 'react'
 import { Avatar, Box, Card, CardActions, CardContent, CardHeader, CardMedia, IconButton, Typography } from '@mui/material'
 import { HeartIcon,ShareIcon } from './Icons' 
+import AvatarImage from '../assets/IMG_20240316_220148_000.jpg'
 
 export default function Post({like,handleLike}) {
   return (
     <Card sx={{
+        marginTop:'20px',
         maxHeight:"1000px"
       }}>
   <CardHeader
     avatar={
-      <Avatar sx={{ bgcolor: 'red' }} aria-label="recipe">
-        R
-      </Avatar>
+      <Avatar sx={{ bgcolor: 'red' }} aria-label="recipe" src={AvatarImage}/>
+        
     }
     
     title="Mahdiyar Vaez"
-    subheaderader="September 14, 2016"
+    subheader="September 14, 2024"
   />
   <CardMedia
     component="img"
