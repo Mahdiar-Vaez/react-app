@@ -13,7 +13,11 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
-export default function Navbar() {
+export default function Navbar({friends,setFriends}) {
+  const handleProfile=()=>{
+    setOpen(false)
+    setFriends(false)
+  }
   const [open, setOpen] = useState(false);
   const StyledToolBar = styled(Toolbar)({
     display: "flex",
@@ -93,7 +97,7 @@ export default function Navbar() {
           horizontal: "left",
         }}
       >
-        <MenuItem onClick={()=>setOpen(false)}>Profile</MenuItem>
+        <MenuItem onClick={handleProfile}>Profile</MenuItem>
         <MenuItem onClick={()=>setOpen(false)}>My account</MenuItem>
         <MenuItem onClick={()=>setOpen(false)}>Logout</MenuItem>
       </Menu>

@@ -23,8 +23,9 @@ export default function RightBar({ friends }) {
   const FriendsTrueStyle = styled(Box)({
     display: "flex",
     flexDirection: "column",
-    height: "100vh",
-    justifyContent: "center",
+    height: "900px",
+    marginBottom:20,
+    justifyContent: "start",
     alignItems: "center",
   });
   const itemData = [
@@ -36,10 +37,7 @@ export default function RightBar({ friends }) {
       img: image3,
       title: "Burger",
     },
-    {
-      img: image2,
-      title: "Camera",
-    },
+
   ];
   const [see, setSee] = useState(false);
   return !friends ? (
@@ -48,7 +46,7 @@ export default function RightBar({ friends }) {
         <Typography fontWeight={400} variant="h6">
           Online Friends
         </Typography>
-        <Stack sx={{ width: "100%" }} direction={"row"}>
+        <Stack sx={{ width: "100%",flexWrap:'wrap' }} direction={"row"}>
           <AvatarGroup max={see ? 10 : 5}>
             <Avatar
               alt="Remy Sharp"
@@ -193,7 +191,7 @@ export default function RightBar({ friends }) {
       <Typography fontWeight={400} variant="h6">
         Online Friends
       </Typography>
-      <Stack sx={{ width: "100%", flexWrap: "wrap" }} direction={"row"}>
+      <Stack sx={{ width: "100%", flexWrap: "wrap",justifyContent:'center' }} direction={"row"}>
         <AvatarGroup max={see ? 7 : 5}>
           <Avatar
             alt="Remy Sharp"
@@ -235,16 +233,17 @@ export default function RightBar({ friends }) {
       </Typography>
       <ImageList
         sx={{
-          marginTop: "5px",
-          maxHeight: "max-content",
+         
+         padding:'10px',
           width: "100%",
           flexWrap: "wrap",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+       
         }}
-        cols={3}
-        rowHeight={200}
+        rowHeight={150}
+        
       >
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
@@ -261,7 +260,7 @@ export default function RightBar({ friends }) {
       <Typography my={1} fontWeight={400} variant="h6">
         Latest Conversation
       </Typography>
-      <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
+      <List  sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
         <ListItem alignItems="flex-start">
           <ListItemAvatar>
             <Avatar
