@@ -16,7 +16,7 @@ import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import GroupIcon from "@mui/icons-material/Group";
 export default function SideBar({mode,setMode}) {
   return (
-    <Box sx={{ display: { xs: "none", sm: "block" } }} p={2} flex={1}>
+    <Box sx={{ display: { xs: "none", md: "block" } }} p={2} flex={1}>
       <Box position={'fixed'}>
 
       <List component="nav" aria-label="main mailbox folders">

@@ -28,7 +28,8 @@ export default function Navbar() {
   const Icons = styled(Box)(({ theme }) => ({
     display: "flex",
     alignItems: "center",
-    justifyContent:'space-between'
+    justifyContent:'space-between',
+
   }));
   const UserBox = styled(Box)(({ theme }) => ({
     display: "flex",
@@ -70,12 +71,12 @@ export default function Navbar() {
           />
         </Icons>
         <UserBox sx={{ display: { xs: "flex", md: "none" } }}>
-          <Avatar
+          <Avatar 
             onClick={() => setOpen(true)}
             alt="V"
-            sx={{ width: 24, height: 24 }}
+            sx={{ width: 24, height: 24 ,cursor:'pointer'}}
           />
-          <Typography onClick={() => setOpen(true)}>Vaez</Typography>
+          <Typography sx={{cursor:"pointer"}} onClick={() => setOpen(true)}>Vaez</Typography>
         </UserBox>
       </StyledToolBar>
       <Menu
