@@ -13,9 +13,9 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import image1 from "../assets/2.jpg";
-import image2 from "../assets/3.jpg";
-import image3 from "../assets/4.jpg";
+import image1 from "../assets/1.avif";
+import image3 from "../assets/2.avif";
+import image2 from "../assets/3.avif";
 import React, { useState } from "react";
 import styled from "@emotion/styled";
 
@@ -23,7 +23,7 @@ export default function RightBar({ friends }) {
   const FriendsTrueStyle = styled(Box)({
     display: "flex",
     flexDirection: "column",
-    height: "900px",
+    height: "1000px",
     marginBottom:20,
     justifyContent: "start",
     alignItems: "center",
@@ -31,12 +31,16 @@ export default function RightBar({ friends }) {
   const itemData = [
     {
       img: image1,
-      title: "Breakfast",
+      title: "nature",
     },
     {
       img: image3,
-      title: "Burger",
+      title: "nature",
     },
+    {
+      img:image2,
+      title:'nature'
+    }
 
   ];
   const [see, setSee] = useState(false);
@@ -46,7 +50,7 @@ export default function RightBar({ friends }) {
         <Typography fontWeight={400} variant="h6">
           Online Friends
         </Typography>
-        <Stack sx={{ width: "100%",flexWrap:'wrap' }} direction={"row"}>
+        <Stack sx={{ width: "100%",flexWrap:'wrap' ,display:'flex'}} direction={"row"}>
           <AvatarGroup max={see ? 10 : 5}>
             <Avatar
               alt="Remy Sharp"
@@ -80,7 +84,7 @@ export default function RightBar({ friends }) {
             />
           </AvatarGroup>{" "}
           <Button onClick={() => setSee(!see)}>
-            {!see ? "See All" : "Show Less"}
+            {!see ? "more" : "Less"}
           </Button>
         </Stack>
         <Typography sx={{ marginTop: "5px" }} fontWeight={400} variant="h6">
@@ -88,7 +92,7 @@ export default function RightBar({ friends }) {
         </Typography>
         <ImageList
           sx={{ marginTop: "5px", height: "200px", width: "400px" }}
-          cols={3}
+          cols={1}
           rowHeight={200}
         >
           {itemData.map((item) => (
@@ -242,7 +246,7 @@ export default function RightBar({ friends }) {
           alignItems: "center",
        
         }}
-        rowHeight={150}
+        rowHeight={200}
         
       >
         {itemData.map((item) => (
@@ -260,7 +264,7 @@ export default function RightBar({ friends }) {
       <Typography my={1} fontWeight={400} variant="h6">
         Latest Conversation
       </Typography>
-      <List  sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
+      <List  sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" ,height:'400px'}}>
         <ListItem alignItems="flex-start">
           <ListItemAvatar>
             <Avatar

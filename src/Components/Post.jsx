@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { Avatar, Box, Card, CardActions, CardContent, CardHeader, CardMedia, Drawer, IconButton, Typography } from '@mui/material'
-import { HeartIcon,ShareIcon,TelegramIcon,WhatsAppIcon,InstagramIcon,EmailIcon,FacebookIcon } from './Icons' 
+import { HeartIcon, ShareIcon, TelegramIcon, WhatsAppIcon, InstagramIcon, EmailIcon, FacebookIcon } from './Icons'
 import AvatarImage from '../assets/IMG_20240316_220148_000.jpg'
-import { findAllByTestId } from '@testing-library/react'
 
 export default function Post({like,handleLike,image}) {
   const [open,setOpen]=useState(false)

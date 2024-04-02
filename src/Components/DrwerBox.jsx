@@ -4,16 +4,10 @@ import GroupIcon from "@mui/icons-material/Group";
 
 import {
   Avatar,
-  Box,
-  Button, Drawer, List,
+  Box, List,
   ListItemButton,
   ListItemIcon,
-  ListItemText,
-  Modal,
-  Stack,
-  Switch,
-  Typography,
-  createTheme
+  ListItemText, Switch
 } from "@mui/material";
 export default function DrwerBox({mode,setMode,handlePageFriends,handlePageProfile}) {
   return (

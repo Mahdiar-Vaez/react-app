@@ -2,23 +2,13 @@ import React, { useEffect, useState } from "react";
 import Feed from "./Components/Feed";
 import RightBar from "./Components/RightBar";
 import SideBar from "./Components/SideBar";
-import ModeNightIcon from "@mui/icons-material/ModeNight";
-import GroupIcon from "@mui/icons-material/Group";
 
 import {
-  Avatar,
   Box,
   Button,
-  Drawer,
-  List,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Modal,
-  Stack,
-  Switch,
-  Typography,
-  createTheme,
+  Drawer, Modal,
+  Stack, Typography,
+  createTheme
 } from "@mui/material";
 import Navbar from "./Components/Navbar";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -85,7 +75,7 @@ export default function App() {
           sx={{
             display: { xs: "flex", md: "none" },
             position: "fixed",
-            top: "9%",
+            top: "10%",
             right: "2%",
             cursor: "pointer",
             zIndex: 1000,

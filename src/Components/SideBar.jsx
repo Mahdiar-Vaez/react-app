@@ -11,7 +11,7 @@ import {
 import React from "react";
 import ModeNightIcon from "@mui/icons-material/ModeNight";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
-import { Settings, StarBorder } from "@mui/icons-material";
+import { Settings } from "@mui/icons-material";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import GroupIcon from "@mui/icons-material/Group";
 export default function SideBar({mode,setMode}) {
