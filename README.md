@@ -6,7 +6,7 @@ this repository is  here to show my skills
 at front end skills
 
 ## 🛠 Skills
-Javascript, HTML, CSS...,react,material ui, strapi
+Javascript, HTML, CSS...,react,material ui
 
 
 ## 🚀 About Me
