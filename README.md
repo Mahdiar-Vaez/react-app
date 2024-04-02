@@ -23,4 +23,5 @@ To deploy this project run
   then
   npm start
 ```
-
+##Link off the project 👇👇 
+https://funny-alfajores-24eaab.netlify.app/
